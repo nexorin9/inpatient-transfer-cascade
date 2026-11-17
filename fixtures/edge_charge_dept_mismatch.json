@@ -1,0 +1,36 @@
+{
+  "_note": "边界样例：床位费归属与科别不一致。床位费 dept_code 与转科目标科室不符；资产层未给换算规则，此处只做一致性提示，不判违规。全部标识均为占位符。",
+  "case": "charge_dept_mismatch",
+  "transfer": {
+    "transfer_no": "<TRANSFER_NO>",
+    "inpatient_no": "<INPATIENT_NO>",
+    "from_dept_code": "<DEPT_CODE_FROM>",
+    "to_dept_code": "<DEPT_CODE_TO>",
+    "from_dept_name": "<原科室名>",
+    "to_dept_name": "<目标科室名>",
+    "ward_code": "<WARD_CODE>",
+    "transfer_at": "<TRANSFER_AT>"
+  },
+  "orders": [],
+  "specimens": [],
+  "charges": [
+    {
+      "category": "bed",
+      "fee_date": "<FEE_DATE>",
+      "amount": "45.00",
+      "dept_code": "<DEPT_CODE_FROM>"
+    },
+    {
+      "category": "bed",
+      "fee_date": "<FEE_DATE_TRANSFER_DAY>",
+      "amount": "45.00",
+      "dept_code": "<DEPT_CODE_OTHER>"
+    }
+  ],
+  "expected": {
+    "hint_level": "归属存疑",
+    "not_a_violation": true,
+    "cross_day_rows": 1,
+    "disclaimer": "资产层未给换算规则，此处为一致性提示"
+  }
+}

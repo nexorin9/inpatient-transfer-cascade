@@ -1,0 +1,12 @@
+{
+  "_note": "脱敏样例：待送标本。只有 status=pending 的行计入牵动范围。",
+  "inpatient_no": "<INPATIENT_NO>",
+  "items": [
+    {
+      "specimen_no": "<SPECIMEN_NO_1>",
+      "test_name": "<检验项目名 1>",
+      "collect_dept_code": "<DEPT_CODE_FROM>",
+      "status": "pending"
+    }
+  ]
+}

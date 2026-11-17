@@ -1,0 +1,31 @@
+{
+  "_note": "边界样例：标本去向歧义。同一张待送标本有多个候选送检科室，实体绑定不唯一，须拒绝自动处置并挂人工待办。全部标识均为占位符。",
+  "case": "specimen_ambiguous",
+  "transfer": {
+    "transfer_no": "<TRANSFER_NO>",
+    "inpatient_no": "<INPATIENT_NO>",
+    "from_dept_code": "<DEPT_CODE_FROM>",
+    "to_dept_code": "<DEPT_CODE_TO>",
+    "from_dept_name": "<原科室名>",
+    "to_dept_name": "<目标科室名>",
+    "ward_code": "<WARD_CODE>",
+    "transfer_at": "<TRANSFER_AT>"
+  },
+  "orders": [],
+  "specimens": [
+    {
+      "specimen_no": "<SPECIMEN_NO_1>",
+      "test_name": "<检验项目名 1>",
+      "collect_dept_code": "<DEPT_CODE_FROM>",
+      "status": "pending",
+      "candidate_dept_codes": ["<DEPT_LAB>", "<DEPT_TRANSFUSION>", "<DEPT_STATION>"]
+    }
+  ],
+  "charges": [],
+  "expected": {
+    "manual": true,
+    "candidate_count": 3,
+    "auto_disposition": 0,
+    "write_requests": 0
+  }
+}

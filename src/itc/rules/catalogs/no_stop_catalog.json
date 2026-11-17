@@ -1,0 +1,10 @@
+{
+  "version": "1.0",
+  "note": "不可停品类院内目录（信息科可维护）。命中药品名精确 / 类别前缀 / 院内编码任一，即不得生成停嘱草稿、不得进入可写清单，标注为不可自动停嘱·需医师判断。目录缺失或损坏时保守按不可停处理。",
+  "label": "不可自动停嘱·需医师判断",
+  "drug_names": ["输血用红细胞悬液", "人血白蛋白"],
+  "category_prefixes": ["输血", "危急值", "抗菌药"],
+  "hospital_codes": ["NS-BLOOD-001", "NS-ABX-002"],
+  "category_fields": ["content", "drug_name", "category", "drug_category"],
+  "code_fields": ["hospital_code", "drug_code", "item_code", "code"]
+}

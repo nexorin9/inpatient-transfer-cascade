@@ -1,0 +1,36 @@
+{
+  "_note": "边界样例：零在执行长嘱。无在执行医嘱时不生成 change_site 节点，牵动范围只剩待送标本与床位费一致性提示。全部标识均为占位符。",
+  "case": "no_executing_orders",
+  "transfer": {
+    "transfer_no": "<TRANSFER_NO>",
+    "inpatient_no": "<INPATIENT_NO>",
+    "from_dept_code": "<DEPT_CODE_FROM>",
+    "to_dept_code": "<DEPT_CODE_TO>",
+    "from_dept_name": "<原科室名>",
+    "to_dept_name": "<目标科室名>",
+    "ward_code": "<WARD_CODE>",
+    "transfer_at": "<TRANSFER_AT>"
+  },
+  "orders": [],
+  "specimens": [
+    {
+      "specimen_no": "<SPECIMEN_NO_1>",
+      "test_name": "<检验项目名 1>",
+      "collect_dept_code": "<DEPT_CODE_FROM>",
+      "status": "pending"
+    }
+  ],
+  "charges": [
+    {
+      "category": "bed",
+      "fee_date": "<FEE_DATE>",
+      "amount": "45.00",
+      "dept_code": "<DEPT_CODE_TO>"
+    }
+  ],
+  "expected": {
+    "change_site_nodes": 0,
+    "has_specimen_route": true,
+    "has_bed_fee_hint": true
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "_note": "脱敏样例：床位费明细。amount 为十进制字符串，解析用 Decimal，避免浮点误差。",
+  "inpatient_no": "<INPATIENT_NO>",
+  "items": [
+    {
+      "category": "bed",
+      "fee_date": "2026-01-01",
+      "amount": "45.00",
+      "dept_code": "<DEPT_CODE_FROM>"
+    }
+  ]
+}

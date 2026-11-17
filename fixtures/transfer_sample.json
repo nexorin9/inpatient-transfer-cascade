@@ -1,0 +1,11 @@
+{
+  "_note": "脱敏样例：全部标识均为占位符，不含姓名 / 身份证 / 联系方式，也不含拟真批次号或住院号。供任务 2 的主干切片直接读取。",
+  "transfer_no": "<TRANSFER_NO>",
+  "inpatient_no": "<INPATIENT_NO>",
+  "from_dept_code": "<DEPT_CODE_FROM>",
+  "to_dept_code": "<DEPT_CODE_TO>",
+  "from_dept_name": "<原科室名>",
+  "to_dept_name": "<目标科室名>",
+  "ward_code": "<WARD_CODE>",
+  "transfer_at": "2026-01-01T09:00:00+08:00"
+}

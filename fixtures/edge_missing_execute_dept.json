@@ -1,0 +1,32 @@
+{
+  "_note": "边界样例：执行科室缺失。某条在执行医嘱缺少 execute_dept_code，严格解析须抛 FieldMissingError，不得用默认值兜底、也不得自动处置。全部标识均为占位符。",
+  "case": "missing_execute_dept",
+  "transfer": {
+    "transfer_no": "<TRANSFER_NO>",
+    "inpatient_no": "<INPATIENT_NO>",
+    "from_dept_code": "<DEPT_CODE_FROM>",
+    "to_dept_code": "<DEPT_CODE_TO>",
+    "from_dept_name": "<原科室名>",
+    "to_dept_name": "<目标科室名>",
+    "ward_code": "<WARD_CODE>",
+    "transfer_at": "<TRANSFER_AT>"
+  },
+  "orders": [
+    {
+      "order_no": "<ORDER_NO_1>",
+      "content": "<医嘱内容 1>",
+      "drug_name": "<药品名 1>",
+      "route": "<给药途径 1>",
+      "frequency": "<频次 1>",
+      "start_at": "<START_AT>"
+    }
+  ],
+  "specimens": [],
+  "charges": [],
+  "expected": {
+    "field_missing": "execute_dept_code",
+    "strict_parse_rejects": true,
+    "auto_disposition": 0,
+    "write_requests": 0
+  }
+}

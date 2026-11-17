@@ -1,0 +1,18 @@
+{
+  "version": "1.0",
+  "note": "科室执行地点映射表（信息科可维护）。mappings 的键为科室编码；equivalent_to 列出可视为同一执行地点、随转科可自动变更的科室编码；canonical_code 为归并后的规范编码。缺映射、或仅登记但不指向新病区（语义不同）时，规则不猜，交人工判定。",
+  "mappings": {
+    "<DEPT_CODE_FROM>": {
+      "canonical_name": "呼吸内科",
+      "canonical_code": "<DEPT_CODE_TO>",
+      "equivalent_to": ["<DEPT_CODE_TO>"],
+      "note": "呼吸内科与呼吸内科病区属同一护理单元，转科后可自动改执行地点"
+    },
+    "<DEPT_CODE_TO>": {
+      "canonical_name": "呼吸内科病区",
+      "canonical_code": "<DEPT_CODE_TO>",
+      "equivalent_to": [],
+      "note": "转科目标病区"
+    }
+  }
+}

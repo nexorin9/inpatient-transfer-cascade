@@ -1,0 +1,43 @@
+# 运行时数据与本地状态
+data/
+logs/
+outputs/
+*.sqlite
+*.sqlite3
+*.db
+
+# 凭据与本地配置（.env.example 是模板，必须提交）
+.env
+.env.*
+!.env.example
+
+# Python
+venv/
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+build/
+dist/
+*.whl
+
+# 前端与构建产物（若后续引入）
+node_modules/
+.next/
+.nuxt/
+target/
+
+# 编辑器与系统
+.idea/
+.vscode/
+.DS_Store
+
+# round 元数据（不得进入发布的项目仓库）
+score.json

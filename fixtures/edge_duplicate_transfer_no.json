@@ -1,0 +1,35 @@
+{
+  "_note": "边界样例：重复转科单号。同一批次出现两张同号转科单，导入去重后只保留一条并记录丢弃原因。全部标识均为占位符。",
+  "case": "duplicate_transfer_no",
+  "transfers": [
+    {
+      "transfer_no": "<TRANSFER_NO>",
+      "inpatient_no": "<INPATIENT_NO>",
+      "from_dept_code": "<DEPT_CODE_FROM>",
+      "to_dept_code": "<DEPT_CODE_TO>",
+      "from_dept_name": "<原科室名>",
+      "to_dept_name": "<目标科室名>",
+      "ward_code": "<WARD_CODE>",
+      "transfer_at": "<TRANSFER_AT>"
+    },
+    {
+      "transfer_no": "<TRANSFER_NO>",
+      "inpatient_no": "<INPATIENT_NO>",
+      "from_dept_code": "<DEPT_CODE_FROM>",
+      "to_dept_code": "<DEPT_CODE_TO>",
+      "from_dept_name": "<原科室名>",
+      "to_dept_name": "<目标科室名>",
+      "ward_code": "<WARD_CODE>",
+      "transfer_at": "<TRANSFER_AT>"
+    }
+  ],
+  "orders": [],
+  "specimens": [],
+  "charges": [],
+  "expected": {
+    "raw_count": 2,
+    "kept": 1,
+    "dropped": 1,
+    "drop_reason": "duplicate_transfer_no"
+  }
+}

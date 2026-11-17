@@ -1,0 +1,16 @@
+{
+  "version": "1.0",
+  "note": "规则目录（信息科可维护）。每条规则声明 id / version / enabled；hit_count 由 RuleRegistry 在运行时累计，不在本文件写死。单个规则文件损坏时保留其余已加载规则并报告 failed 项。",
+  "rules": [
+    {"id": "EXEC_SITE_CONSISTENT", "version": "1.0", "enabled": true, "description": "执行科室与新病区一致，无需变更"},
+    {"id": "EXEC_SITE_MAP_EXPLAINED", "version": "1.0", "enabled": true, "description": "科室映射表可解释执行科室与新病区的差异，可自动改执行地点"},
+    {"id": "EXEC_SITE_HARD_CONFLICT", "version": "1.0", "enabled": true, "description": "执行科室不等于新病区且映射无法解释，硬矛盾，需人工判定"},
+    {"id": "SPECIMEN_ROUTE_UNIQUE", "version": "1.0", "enabled": true, "description": "候选送检科室唯一，可自动处置"},
+    {"id": "SPECIMEN_ROUTE_AMBIGUOUS", "version": "1.0", "enabled": true, "description": "候选送检科室大于一个或无法定位，拒绝自动处置，产出人工待办"},
+    {"id": "NO_STOP_CATALOG_HIT", "version": "1.0", "enabled": true, "description": "命中不可停品类，不生成停嘱草稿、不进入可写清单"},
+    {"id": "NO_STOP_CATALOG_ERROR", "version": "1.0", "enabled": true, "description": "不可停品类目录缺失或损坏，保守按不可停处理并提示人工维护"},
+    {"id": "BED_FEE_CONSISTENT", "version": "1.0", "enabled": true, "description": "床位费归属与科别完全一致"},
+    {"id": "BED_FEE_OWNERSHIP_DOUBT", "version": "1.0", "enabled": true, "description": "床位费归属存疑，需人工核对"},
+    {"id": "BED_FEE_TRANSFER_DAY", "version": "1.0", "enabled": true, "description": "转科当天的床位费行单列提示，不与转科前后合并"}
+  ]
+}
